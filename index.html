@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Valentine's Day, Archana Abhinav ❤️</title>
+  <meta name="description" content="A romantic Valentine's Day surprise from Abhinav to Archana Abhinav." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating Hearts Background -->
+  <div id="floating-hearts" aria-hidden="true"></div>
+
+  <!-- Mute Toggle -->
+  <button id="mute-toggle" title="Toggle Music" aria-label="Toggle background music">🔇</button>
+
+  <!-- ==================== HERO SCREEN ==================== -->
+  <section id="hero" class="screen active">
+    <div class="glass-card hero-card fade-in">
+      <h1 class="script-font">Happy Valentine's Day, My Love ❤️</h1>
+      <p class="subtitle">Are you ready for a little love game, Archana Abhinav?</p>
+      <button class="btn-glow" id="btn-start">Start the Surprise</button>
+    </div>
+  </section>
+
+  <!-- ==================== QUESTION SCREEN ==================== -->
+  <section id="question-screen" class="screen">
+    <div class="glass-card question-card fade-in">
+      <p id="question-counter" class="question-counter"></p>
+      <h2 id="question-text" class="script-font question-text"></h2>
+      <div class="btn-row" id="btn-row">
+        <button class="btn-glow btn-yes" id="btn-yes">Yes ❤️</button>
+        <button class="btn-glow btn-no" id="btn-no">No</button>
+      </div>
+      <p id="tease-msg" class="tease-msg"></p>
+    </div>
+  </section>
+
+  <!-- ==================== WRONG ANSWER SCREEN ==================== -->
+  <section id="wrong-screen" class="screen">
+    <div class="glass-card fade-in">
+      <h2 class="script-font">⚠️ Wrong Answer!</h2>
+      <p class="subtitle">You selected the wrong answer.<br>Please select the correct one to continue the love story ❤️</p>
+      <button class="btn-glow btn-big-yes" id="btn-wrong-yes">YES OF COURSE ❤️</button>
+    </div>
+  </section>
+
+  <!-- ==================== GAME SCREEN ==================== -->
+  <section id="game-screen" class="screen">
+    <div class="glass-card game-card fade-in">
+      <h2 class="script-font">Unlock Your Love Letter 💌</h2>
+      <p class="subtitle">Catch 10 flying hearts to reveal the message!</p>
+      <div id="game-container"></div>
+      <p id="score-counter">Hearts Collected: 0 / 10</p>
+    </div>
+  </section>
+
+  <!-- ==================== LOVE LETTER SCREEN ==================== -->
+  <section id="letter-screen" class="screen">
+    <div class="glass-card letter-card fade-in">
+      <h2 class="script-font">A Letter For You</h2>
+      <div class="love-letter">
+        <p>Dear Archana Abhinav,</p>
+        <p>You are my strength, my happiness, my forever.<br>
+        Every day with you is a blessing.</p>
+        <p>I don't need a special day to love you —<br>
+        But today, I want to remind you how special you are.</p>
+        <p>Happy Valentine's Day, my love.</p>
+        <p class="letter-sign">– Yours always, Abhinav ❤️</p>
+      </div>
+      <button class="btn-glow" id="btn-last-question">One Last Question 💍</button>
+    </div>
+  </section>
+
+  <!-- ==================== FINAL QUESTION SCREEN ==================== -->
+  <section id="final-screen" class="screen">
+    <div class="glass-card question-card fade-in">
+      <h2 class="script-font question-text">Will you keep loving me forever?</h2>
+      <div class="btn-row" id="final-btn-row">
+        <button class="btn-glow btn-yes" id="btn-final-yes">Yes ❤️</button>
+        <button class="btn-glow btn-no" id="btn-final-no">No</button>
+      </div>
+      <p id="final-tease" class="tease-msg"></p>
+    </div>
+  </section>
+
+  <!-- ==================== FINALE SCREEN ==================== -->
+  <section id="finale-screen" class="screen">
+    <div class="glass-card finale-card fade-in">
+      <h1 class="script-font finale-heading">I Love You Infinite Times ❤️</h1>
+      <div id="heart-explosion" class="heart-explosion"></div>
+    </div>
+  </section>
+
+  <!-- Canvas for confetti -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Heart Burst Container (for Yes clicks) -->
+  <div id="heart-burst-container" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
